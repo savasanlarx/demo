@@ -1,0 +1,753 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Manavgat Halı Yıkama | Halı, Koltuk, Yorgan & Battaniye Yıkama</title>
+<meta name="description" content="Manavgat'ta profesyonel halı yıkama, koltuk yıkama, yorgan ve battaniye yıkama hizmeti. Ücretsiz servis. Sipariş hattı: 0242 743 01 18">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --primary:#0a6ebd;
+    --primary-dark:#064a80;
+    --accent:#ffb400;
+    --accent-dark:#e09e00;
+    --text:#1e2a38;
+    --muted:#5b6b7c;
+    --bg:#ffffff;
+    --bg-soft:#f2f8fd;
+    --card:#ffffff;
+    --border:#e2ebf3;
+    --radius:18px;
+    --shadow:0 10px 30px rgba(10,110,189,.12);
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{font-family:'Poppins',system-ui,-apple-system,Segoe UI,Roboto,sans-serif;color:var(--text);background:var(--bg);line-height:1.65}
+  a{color:inherit;text-decoration:none}
+  img,svg{display:block}
+  .container{width:min(1180px,100% - 32px);margin-inline:auto}
+  section{padding:90px 0}
+  .section-title{text-align:center;margin-bottom:50px}
+  .section-title .tag{display:inline-block;background:rgba(10,110,189,.1);color:var(--primary);font-weight:600;font-size:.85rem;padding:6px 16px;border-radius:50px;margin-bottom:12px;letter-spacing:.5px}
+  .section-title h2{font-size:clamp(1.7rem,3.5vw,2.5rem);line-height:1.25;margin-bottom:12px}
+  .section-title p{color:var(--muted);max-width:640px;margin-inline:auto}
+
+  /* Buttons */
+  .btn{display:inline-flex;align-items:center;gap:10px;padding:14px 28px;border-radius:50px;font-weight:600;transition:.25s;border:none;cursor:pointer;font-family:inherit;font-size:1rem}
+  .btn svg{width:20px;height:20px}
+  .btn-accent{background:var(--accent);color:#1e2a38;box-shadow:0 8px 20px rgba(255,180,0,.35)}
+  .btn-accent:hover{background:var(--accent-dark);transform:translateY(-2px)}
+  .btn-outline{border:2px solid #fff;color:#fff}
+  .btn-outline:hover{background:#fff;color:var(--primary)}
+  .btn-primary{background:var(--primary);color:#fff}
+  .btn-primary:hover{background:var(--primary-dark);transform:translateY(-2px)}
+
+  /* Top bar */
+  .topbar{background:var(--primary-dark);color:#cfe6fa;font-size:.85rem;padding:8px 0}
+  .topbar .container{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+  .topbar a{color:#fff;font-weight:600}
+
+  /* Header */
+  header{position:sticky;top:0;z-index:100;background:rgba(255,255,255,.96);backdrop-filter:blur(8px);box-shadow:0 2px 15px rgba(0,0,0,.06)}
+  .nav{display:flex;align-items:center;justify-content:space-between;height:74px}
+  .logo{display:flex;align-items:center;gap:10px;font-weight:800;font-size:1.25rem;color:var(--primary-dark)}
+  .logo-icon{width:44px;height:44px;border-radius:12px;background:linear-gradient(135deg,var(--primary),#38a7f5);display:grid;place-items:center}
+  .logo-icon svg{width:26px;height:26px}
+  .logo small{display:block;font-size:.72rem;font-weight:500;color:var(--muted);line-height:1}
+  .menu{display:flex;gap:28px;list-style:none;align-items:center}
+  .menu a{font-weight:500;font-size:.95rem;transition:.2s}
+  .menu a:hover{color:var(--primary)}
+  .menu .btn{padding:10px 20px;font-size:.9rem}
+  .hamburger{display:none;background:none;border:none;cursor:pointer;padding:6px}
+  .hamburger span{display:block;width:26px;height:3px;background:var(--text);margin:5px 0;border-radius:3px;transition:.3s}
+
+  /* Hero */
+  .hero{position:relative;background:linear-gradient(135deg,#064a80 0%,#0a6ebd 55%,#38a7f5 100%);color:#fff;padding:100px 0 130px;overflow:hidden}
+  .hero::before,.hero::after{content:"";position:absolute;border-radius:50%;background:rgba(255,255,255,.07)}
+  .hero::before{width:420px;height:420px;top:-120px;right:-100px}
+  .hero::after{width:260px;height:260px;bottom:-80px;left:-60px}
+  .bubble{position:absolute;border-radius:50%;background:rgba(255,255,255,.18);animation:float 8s ease-in-out infinite}
+  @keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-25px)}}
+  .hero .container{position:relative;z-index:2;display:grid;grid-template-columns:1.1fr .9fr;gap:50px;align-items:center}
+  .hero-badge{display:inline-flex;align-items:center;gap:8px;background:rgba(255,255,255,.15);padding:8px 18px;border-radius:50px;font-size:.88rem;margin-bottom:20px}
+  .hero h1{font-size:clamp(2rem,5vw,3.4rem);line-height:1.15;margin-bottom:20px;font-weight:800}
+  .hero h1 span{color:var(--accent)}
+  .hero p{font-size:1.1rem;opacity:.92;margin-bottom:32px;max-width:540px}
+  .hero-buttons{display:flex;gap:14px;flex-wrap:wrap}
+  .hero-card{background:#fff;color:var(--text);border-radius:24px;padding:34px;box-shadow:0 25px 60px rgba(0,0,0,.25)}
+  .hero-card h3{font-size:1.3rem;margin-bottom:6px}
+  .hero-card .phone-big{display:block;font-size:clamp(1.6rem,4vw,2.1rem);font-weight:800;color:var(--primary);margin:14px 0}
+  .hero-card ul{list-style:none;margin-top:16px}
+  .hero-card li{display:flex;gap:10px;align-items:center;padding:7px 0;color:var(--muted);font-size:.95rem}
+  .check{width:22px;height:22px;flex-shrink:0;border-radius:50%;background:#e3f6ea;color:#1a9b4b;display:grid;place-items:center;font-size:.8rem;font-weight:700}
+  .wave{position:absolute;bottom:-1px;left:0;width:100%;z-index:3}
+
+  /* Stats */
+  .stats{margin-top:-60px;position:relative;z-index:5;padding:0}
+  .stats-grid{display:grid;grid-template-columns:repeat(4,1fr);background:#fff;border-radius:var(--radius);box-shadow:var(--shadow)}
+  .stat{text-align:center;padding:30px 16px;border-right:1px solid var(--border)}
+  .stat:last-child{border-right:none}
+  .stat b{display:block;font-size:2.1rem;color:var(--primary);font-weight:800}
+  .stat span{color:var(--muted);font-size:.92rem}
+
+  /* Services */
+  .services-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:28px}
+  .service{background:var(--card);border:1px solid var(--border);border-radius:var(--radius);overflow:hidden;transition:.3s;display:flex;flex-direction:column}
+  .service:hover{transform:translateY(-8px);box-shadow:var(--shadow)}
+  .service-head{height:190px;display:grid;place-items:center;position:relative}
+  .service-head svg{width:120px;height:120px}
+  .s1 .service-head{background:linear-gradient(135deg,#e0f0ff,#b8dcfb)}
+  .s2 .service-head{background:linear-gradient(135deg,#fff3d6,#ffe1a1)}
+  .s3 .service-head{background:linear-gradient(135deg,#e6f8ee,#bdebd0)}
+  .service-body{padding:28px;flex:1;display:flex;flex-direction:column}
+  .service-body h3{font-size:1.4rem;margin-bottom:10px}
+  .service-body p{color:var(--muted);margin-bottom:16px;font-size:.96rem}
+  .service-body ul{list-style:none;margin-bottom:22px;flex:1}
+  .service-body li{padding:5px 0 5px 26px;position:relative;font-size:.93rem}
+  .service-body li::before{content:"✔";position:absolute;left:0;color:var(--primary);font-weight:700}
+  .service-body .btn{align-self:flex-start;padding:11px 22px;font-size:.92rem}
+
+  /* Detail tabs */
+  .details{background:var(--bg-soft)}
+  .tabs{display:flex;justify-content:center;gap:10px;margin-bottom:36px;flex-wrap:wrap}
+  .tab-btn{padding:12px 24px;border-radius:50px;border:2px solid var(--primary);background:#fff;color:var(--primary);font-weight:600;cursor:pointer;font-family:inherit;font-size:.95rem;transition:.2s}
+  .tab-btn.active,.tab-btn:hover{background:var(--primary);color:#fff}
+  .tab-panel{display:none;background:#fff;border-radius:var(--radius);padding:44px;box-shadow:var(--shadow);animation:fade .4s}
+  .tab-panel.active{display:grid;grid-template-columns:1fr 1fr;gap:40px}
+  @keyframes fade{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
+  .tab-panel h3{font-size:1.6rem;margin-bottom:14px;color:var(--primary-dark)}
+  .tab-panel p{color:var(--muted);margin-bottom:14px}
+  .tab-panel h4{margin-bottom:12px}
+  .tip{background:#fff8e6;border-left:4px solid var(--accent);padding:14px 18px;border-radius:10px;font-size:.92rem;margin-top:10px}
+  .types{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:22px}
+  .types span{background:var(--bg-soft);border:1px solid var(--border);padding:6px 14px;border-radius:50px;font-size:.85rem;font-weight:500}
+
+  /* Process */
+  .steps{display:grid;grid-template-columns:repeat(4,1fr);gap:24px;position:relative}
+  .step{text-align:center;padding:20px}
+  .step-num{width:80px;height:80px;margin:0 auto 18px;border-radius:50%;background:linear-gradient(135deg,var(--primary),#38a7f5);color:#fff;display:grid;place-items:center;font-size:1.8rem;font-weight:800;box-shadow:0 10px 25px rgba(10,110,189,.3);position:relative}
+  .step h4{font-size:1.1rem;margin-bottom:8px}
+  .step p{color:var(--muted);font-size:.92rem}
+
+  /* Why */
+  .why{background:var(--bg-soft)}
+  .why-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+  .why-item{background:#fff;padding:30px;border-radius:var(--radius);display:flex;gap:18px;align-items:flex-start;transition:.3s;border:1px solid var(--border)}
+  .why-item:hover{box-shadow:var(--shadow)}
+  .why-icon{width:54px;height:54px;flex-shrink:0;border-radius:14px;background:rgba(10,110,189,.1);display:grid;place-items:center;font-size:1.6rem}
+  .why-item h4{margin-bottom:6px}
+  .why-item p{color:var(--muted);font-size:.92rem}
+
+  /* Order */
+  .order-wrap{display:grid;grid-template-columns:1fr 1.1fr;gap:40px;align-items:stretch}
+  .order-info{background:linear-gradient(135deg,#064a80,#0a6ebd);color:#fff;border-radius:var(--radius);padding:44px;position:relative;overflow:hidden}
+  .order-info::after{content:"";position:absolute;width:250px;height:250px;border-radius:50%;background:rgba(255,255,255,.07);right:-80px;bottom:-80px}
+  .order-info h3{font-size:1.7rem;margin-bottom:12px}
+  .order-info p{opacity:.9;margin-bottom:24px}
+  .order-phone{display:flex;align-items:center;gap:16px;background:rgba(255,255,255,.12);padding:20px;border-radius:16px;margin-bottom:24px;transition:.2s}
+  .order-phone:hover{background:rgba(255,255,255,.2)}
+  .order-phone .ic{width:56px;height:56px;border-radius:50%;background:var(--accent);display:grid;place-items:center;flex-shrink:0;animation:pulse 2s infinite}
+  .order-phone .ic svg{width:26px;height:26px}
+  @keyframes pulse{0%{box-shadow:0 0 0 0 rgba(255,180,0,.6)}70%{box-shadow:0 0 0 16px rgba(255,180,0,0)}100%{box-shadow:0 0 0 0 rgba(255,180,0,0)}}
+  .order-phone small{display:block;opacity:.85;font-size:.85rem}
+  .order-phone b{font-size:1.6rem;letter-spacing:.5px}
+  .hours{list-style:none}
+  .hours li{display:flex;justify-content:space-between;padding:9px 0;border-bottom:1px dashed rgba(255,255,255,.25);font-size:.95rem}
+  .order-form{background:#fff;border:1px solid var(--border);border-radius:var(--radius);padding:40px;box-shadow:var(--shadow)}
+  .order-form h3{font-size:1.4rem;margin-bottom:6px}
+  .order-form > p{color:var(--muted);font-size:.92rem;margin-bottom:22px}
+  .form-row{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+  .field{margin-bottom:16px}
+  .field label{display:block;font-weight:500;font-size:.88rem;margin-bottom:6px}
+  .field input,.field select,.field textarea{width:100%;padding:13px 16px;border:1.5px solid var(--border);border-radius:12px;font-family:inherit;font-size:.95rem;background:#fbfdff;transition:.2s;color:var(--text)}
+  .field input:focus,.field select:focus,.field textarea:focus{outline:none;border-color:var(--primary);background:#fff;box-shadow:0 0 0 4px rgba(10,110,189,.1)}
+  .checks{display:flex;flex-wrap:wrap;gap:10px}
+  .checks label{display:flex;align-items:center;gap:8px;border:1.5px solid var(--border);padding:9px 14px;border-radius:50px;cursor:pointer;font-size:.9rem;font-weight:500;margin:0;transition:.2s}
+  .checks input{width:auto;accent-color:var(--primary)}
+  .checks label:has(input:checked){border-color:var(--primary);background:rgba(10,110,189,.06);color:var(--primary)}
+  .order-form .btn{width:100%;justify-content:center}
+  .form-result{display:none;margin-top:18px;background:#e9f8ef;border:1px solid #b9e6c9;color:#16653a;padding:18px;border-radius:12px;font-size:.93rem}
+  .form-result.show{display:block}
+  .form-result a{font-weight:700;text-decoration:underline}
+
+  /* FAQ */
+  .faq-list{max-width:820px;margin-inline:auto}
+  .faq{border:1px solid var(--border);border-radius:14px;margin-bottom:14px;overflow:hidden;background:#fff}
+  .faq summary{padding:20px 24px;font-weight:600;cursor:pointer;list-style:none;display:flex;justify-content:space-between;align-items:center;gap:12px}
+  .faq summary::-webkit-details-marker{display:none}
+  .faq summary::after{content:"+";font-size:1.5rem;color:var(--primary);transition:.3s;flex-shrink:0}
+  .faq[open] summary::after{transform:rotate(45deg)}
+  .faq p{padding:0 24px 20px;color:var(--muted)}
+
+  /* Contact */
+  .contact{background:var(--bg-soft)}
+  .contact-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-bottom:40px}
+  .contact-card{background:#fff;border-radius:var(--radius);padding:34px 26px;text-align:center;border:1px solid var(--border);transition:.3s}
+  .contact-card:hover{transform:translateY(-5px);box-shadow:var(--shadow)}
+  .contact-card .ci{width:66px;height:66px;margin:0 auto 16px;border-radius:50%;background:linear-gradient(135deg,var(--primary),#38a7f5);display:grid;place-items:center}
+  .contact-card .ci svg{width:30px;height:30px}
+  .contact-card h4{margin-bottom:6px;font-size:1.1rem}
+  .contact-card p,.contact-card a{color:var(--muted)}
+  .contact-card a.big{color:var(--primary);font-weight:700;font-size:1.25rem}
+  .map{border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow);height:380px;background:#dfe9f2}
+  .map iframe{width:100%;height:100%;border:0}
+
+  /* CTA band */
+  .cta{background:linear-gradient(135deg,var(--accent),#ffcf4d);padding:60px 0}
+  .cta .container{display:flex;justify-content:space-between;align-items:center;gap:24px;flex-wrap:wrap}
+  .cta h2{font-size:clamp(1.4rem,3vw,2rem);line-height:1.3}
+  .cta p{font-weight:500}
+  .cta .btn{background:var(--primary-dark);color:#fff}
+  .cta .btn:hover{background:#04355c}
+
+  /* Footer */
+  footer{background:#0b1d2e;color:#a9b8c7;padding:60px 0 24px}
+  .foot-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:40px;margin-bottom:40px}
+  footer h5{color:#fff;font-size:1.05rem;margin-bottom:16px}
+  footer ul{list-style:none}
+  footer li{padding:5px 0}
+  footer a:hover{color:var(--accent)}
+  footer .logo{color:#fff;margin-bottom:14px}
+  footer .logo small{color:#8aa0b4}
+  .copy{border-top:1px solid rgba(255,255,255,.1);padding-top:22px;text-align:center;font-size:.88rem}
+
+  /* Floating call */
+  .float-call{position:fixed;right:20px;bottom:20px;z-index:200;display:flex;align-items:center;gap:10px;background:#1a9b4b;color:#fff;padding:14px 22px;border-radius:50px;font-weight:600;box-shadow:0 10px 25px rgba(26,155,75,.45);animation:pulseG 2.2s infinite}
+  .float-call svg{width:22px;height:22px}
+  @keyframes pulseG{0%{box-shadow:0 0 0 0 rgba(26,155,75,.55)}70%{box-shadow:0 0 0 18px rgba(26,155,75,0)}100%{box-shadow:0 0 0 0 rgba(26,155,75,0)}}
+
+  .reveal{opacity:0;transform:translateY(30px);transition:all .7s ease}
+  .reveal.visible{opacity:1;transform:none}
+
+  /* Responsive */
+  @media (max-width: 980px){
+    .hero .container,.order-wrap,.tab-panel.active{grid-template-columns:1fr}
+    .services-grid,.why-grid,.contact-grid{grid-template-columns:1fr 1fr}
+    .steps{grid-template-columns:1fr 1fr}
+    .foot-grid{grid-template-columns:1fr 1fr}
+    .menu{position:fixed;top:74px;left:0;right:0;background:#fff;flex-direction:column;padding:24px;gap:18px;box-shadow:0 15px 30px rgba(0,0,0,.1);transform:translateY(-150%);transition:.35s;z-index:-1}
+    .menu.open{transform:none}
+    .hamburger{display:block}
+  }
+  @media (max-width: 640px){
+    section{padding:64px 0}
+    .services-grid,.why-grid,.contact-grid,.steps,.foot-grid,.form-row{grid-template-columns:1fr}
+    .stats-grid{grid-template-columns:1fr 1fr}
+    .stat:nth-child(2){border-right:none}
+    .stat:nth-child(-n+2){border-bottom:1px solid var(--border)}
+    .tab-panel{padding:26px}
+    .order-info,.order-form{padding:28px}
+    .hero{padding:70px 0 120px}
+    .topbar .tb-left{display:none}
+    .float-call span{display:none}
+    .float-call{padding:16px}
+  }
+</style>
+</head>
+<body>
+
+<!-- Top bar -->
+<div class="topbar">
+  <div class="container">
+    <div class="tb-left">📍 Manavgat / Antalya &nbsp;•&nbsp; 🚚 Ücretsiz Alım & Teslim</div>
+    <div>📞 Sipariş Hattı: <a href="tel:+902427430118">0242 743 01 18</a></div>
+  </div>
+</div>
+
+<!-- Header -->
+<header>
+  <div class="container nav">
+    <a href="#anasayfa" class="logo">
+      <div class="logo-icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2.7C9 6.5 6 10 6 14a6 6 0 0 0 12 0c0-4-3-7.5-6-11.3z"/><path d="M9.5 15a2.5 2.5 0 0 0 2.5 2.5"/></svg>
+      </div>
+      <div>Manavgat Halı Yıkama<small>Temizlikte güvenin adresi</small></div>
+    </a>
+    <button class="hamburger" aria-label="Menü" onclick="document.querySelector('.menu').classList.toggle('open')">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="menu">
+      <li><a href="#hizmetler">Hizmetler</a></li>
+      <li><a href="#detay">Detaylar</a></li>
+      <li><a href="#surec">Nasıl Çalışır?</a></li>
+      <li><a href="#sss">S.S.S.</a></li>
+      <li><a href="#iletisim">İletişim</a></li>
+      <li><a href="#siparis" class="btn btn-primary">Sipariş Ver</a></li>
+    </ul>
+  </div>
+</header>
+
+<!-- Hero -->
+<section class="hero" id="anasayfa">
+  <div class="bubble" style="width:30px;height:30px;top:20%;left:45%"></div>
+  <div class="bubble" style="width:18px;height:18px;top:65%;left:52%;animation-delay:2s"></div>
+  <div class="bubble" style="width:44px;height:44px;top:12%;left:8%;animation-delay:4s"></div>
+  <div class="container">
+    <div>
+      <div class="hero-badge">⭐ Manavgat'ın Güvenilir Temizlik Firması</div>
+      <h1>Halılarınız <span>İlk Günkü</span> Gibi Tertemiz!</h1>
+      <p>Halı, koltuk, yorgan ve battaniyeleriniz; modern makinelerimiz, sağlığa zararsız deterjanlarımız ve uzman ekibimizle derinlemesine temizlenir, kapınıza kadar teslim edilir.</p>
+      <div class="hero-buttons">
+        <a href="tel:+902427430118" class="btn btn-accent">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25 11.4 11.4 0 0 0 3.6.57 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.45.57 3.57a1 1 0 0 1-.25 1z"/></svg>
+          Hemen Ara
+        </a>
+        <a href="#hizmetler" class="btn btn-outline">Hizmetlerimiz</a>
+      </div>
+    </div>
+    <div class="hero-card">
+      <h3>📞 Sipariş Hattı</h3>
+      <p style="color:var(--muted);font-size:.95rem">Bir telefon kadar yakınız. Arayın, adresinizden alalım.</p>
+      <a href="tel:+902427430118" class="phone-big">0242 743 01 18</a>
+      <a href="tel:+902427430118" class="btn btn-primary" style="width:100%;justify-content:center">Şimdi Sipariş Ver</a>
+      <ul>
+        <li><span class="check">✓</span> Ücretsiz adresten alım & teslim</li>
+        <li><span class="check">✓</span> Hijyenik kurutma odası</li>
+        <li><span class="check">✓</span> Leke & koku giderme</li>
+        <li><span class="check">✓</span> Paketli, poşetli teslimat</li>
+      </ul>
+    </div>
+  </div>
+  <svg class="wave" viewBox="0 0 1440 90" preserveAspectRatio="none"><path fill="#fff" d="M0,40 C320,100 720,0 1080,50 C1260,75 1380,60 1440,50 L1440,90 L0,90 Z"/></svg>
+</section>
+
+<!-- Stats -->
+<section class="stats">
+  <div class="container">
+    <div class="stats-grid">
+      <div class="stat"><b data-count="15">0</b><span>Yıllık Tecrübe</span></div>
+      <div class="stat"><b data-count="12000">0</b><span>Mutlu Müşteri</span></div>
+      <div class="stat"><b data-count="50000">0</b><span>m² Yıkanan Halı</span></div>
+      <div class="stat"><b>%100</b><span>Memnuniyet</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- Services -->
+<section id="hizmetler">
+  <div class="container">
+    <div class="section-title">
+      <span class="tag">HİZMETLERİMİZ</span>
+      <h2>Size Özel Temizlik Çözümleri</h2>
+      <p>Evinizin en çok kullanılan tekstil ürünlerini profesyonel ekipmanlarla temizliyor, sağlıklı ve ferah bir yaşam alanı sunuyoruz.</p>
+    </div>
+    <div class="services-grid">
+      <!-- Halı -->
+      <div class="service s1 reveal">
+        <div class="service-head">
+          <svg viewBox="0 0 120 120" fill="none">
+            <rect x="18" y="28" width="84" height="64" rx="6" fill="#0a6ebd"/>
+            <rect x="26" y="36" width="68" height="48" rx="3" fill="#38a7f5"/>
+            <path d="M60 42 L80 60 L60 78 L40 60 Z" fill="#ffb400"/>
+            <path d="M60 50 L72 60 L60 70 L48 60 Z" fill="#fff"/>
+            <g stroke="#064a80" stroke-width="2.5" stroke-linecap="round">
+              <path d="M22 92v8M30 92v8M38 92v8M46 92v8M54 92v8M62 92v8M70 92v8M78 92v8M86 92v8M94 92v8"/>
+              <path d="M22 20v8M30 20v8M38 20v8M46 20v8M54 20v8M62 20v8M70 20v8M78 20v8M86 20v8M94 20v8"/>
+            </g>
+          </svg>
+        </div>
+        <div class="service-body">
+          <h3>Halı Yıkama</h3>
+          <p>Makine halısından el dokumasına, tüm halılarınız cinsine uygun yöntemle, tozdan arındırılarak yıkanır.</p>
+          <ul>
+            <li>Toz alma makinesi ile ön temizlik</li>
+            <li>Leke ve koku giderme</li>
+            <li>Bol su ile durulama</li>
+            <li>Kurutma odasında hijyenik kurutma</li>
+            <li>Saçak (püskül) bakımı</li>
+          </ul>
+          <a href="#siparis" class="btn btn-primary" data-service="Halı Yıkama">Sipariş Ver →</a>
+        </div>
+      </div>
+      <!-- Koltuk -->
+      <div class="service s2 reveal">
+        <div class="service-head">
+          <svg viewBox="0 0 120 120" fill="none">
+            <rect x="26" y="34" width="68" height="34" rx="10" fill="#e09e00"/>
+            <rect x="14" y="54" width="20" height="34" rx="8" fill="#ffb400"/>
+            <rect x="86" y="54" width="20" height="34" rx="8" fill="#ffb400"/>
+            <rect x="30" y="64" width="60" height="22" rx="6" fill="#ffcf4d"/>
+            <path d="M60 64v22" stroke="#e09e00" stroke-width="2"/>
+            <rect x="18" y="88" width="6" height="10" rx="2" fill="#7a5600"/>
+            <rect x="96" y="88" width="6" height="10" rx="2" fill="#7a5600"/>
+            <circle cx="88" cy="26" r="6" fill="#fff"/><circle cx="98" cy="18" r="4" fill="#fff"/><circle cx="78" cy="16" r="3" fill="#fff"/>
+          </svg>
+        </div>
+        <div class="service-body">
+          <h3>Koltuk Yıkama</h3>
+          <p>Koltuk, kanepe, sandalye ve yataklarınız yerinde, özel vakumlu makinelerle derinlemesine temizlenir.</p>
+          <ul>
+            <li>Yerinde (evde) yıkama hizmeti</li>
+            <li>Kumaş cinsine uygun şampuan</li>
+            <li>Leke, ter ve koku giderme</li>
+            <li>Güçlü vakumla hızlı kuruma</li>
+            <li>Yatak ve sandalye temizliği</li>
+          </ul>
+          <a href="#siparis" class="btn btn-primary" data-service="Koltuk Yıkama">Sipariş Ver →</a>
+        </div>
+      </div>
+      <!-- Yorgan -->
+      <div class="service s3 reveal">
+        <div class="service-head">
+          <svg viewBox="0 0 120 120" fill="none">
+            <rect x="20" y="70" width="80" height="22" rx="8" fill="#1a9b4b"/>
+            <rect x="24" y="50" width="72" height="22" rx="8" fill="#3cc373"/>
+            <rect x="28" y="30" width="64" height="22" rx="8" fill="#8fe0b0"/>
+            <path d="M36 41h48M32 61h56M28 81h64" stroke="#fff" stroke-width="2" stroke-dasharray="4 4"/>
+            <circle cx="96" cy="26" r="5" fill="#fff"/><circle cx="104" cy="38" r="3" fill="#fff"/>
+          </svg>
+        </div>
+        <div class="service-body">
+          <h3>Yorgan & Battaniye Yıkama</h3>
+          <p>Yün, elyaf, pamuk ve kaz tüyü yorganlar ile her tür battaniye özel programlarla yıkanır.</p>
+          <ul>
+            <li>Yün & elyaf yorgan yıkama</li>
+            <li>Battaniye & pike temizliği</li>
+            <li>Akar ve bakterilere karşı hijyen</li>
+            <li>Kabartarak kurutma</li>
+            <li>Özel poşetle paketleme</li>
+          </ul>
+          <a href="#siparis" class="btn btn-primary" data-service="Yorgan & Battaniye Yıkama">Sipariş Ver →</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Details tabs -->
+<section class="details" id="detay">
+  <div class="container">
+    <div class="section-title">
+      <span class="tag">HİZMET DETAYLARI</span>
+      <h2>Neyi, Nasıl Temizliyoruz?</h2>
+      <p>Her ürünün yapısı farklıdır. Bu yüzden her hizmetimizde ürününüze özel bir temizlik süreci uyguluyoruz.</p>
+    </div>
+    <div class="tabs">
+      <button class="tab-btn active" data-tab="t1">🧶 Halı Yıkama</button>
+      <button class="tab-btn" data-tab="t2">🛋️ Koltuk Yıkama</button>
+      <button class="tab-btn" data-tab="t3">🛏️ Yorgan & Battaniye</button>
+    </div>
+
+    <div class="tab-panel active" id="t1">
+      <div>
+        <h3>Halı Yıkama</h3>
+        <p>Halılarınız adresinizden ücretsiz alınarak tesisimize getirilir. Önce toz alma makinesinde halının dibine işlemiş toz ve kum tamamen çıkarılır. Ardından halının cinsine uygun şampuanla fırçalı makinelerde yıkanır.</p>
+        <p>Lekeler için özel leke çıkarıcılar uygulanır, bol su ile durulanan halılar sıkma makinesinde suyu alınarak kurutma odasına asılır. Tamamen kuruyan halılar son kontrolden geçirilip paketlenerek teslim edilir.</p>
+        <div class="tip">💡 <b>İpucu:</b> Halılarınızı yılda en az 1–2 kez profesyonel olarak yıkatmak, akar ve alerjenlerden korunmanızı sağlar.</div>
+      </div>
+      <div>
+        <h4>Yıkadığımız Halı Türleri</h4>
+        <div class="types">
+          <span>Makine Halısı</span><span>El Dokuma Halı</span><span>Yün Halı</span><span>İpek Halı</span>
+          <span>Shaggy Halı</span><span>Kilim</span><span>Bambu Halı</span><span>Yolluk</span>
+          <span>Seccade</span><span>Post</span><span>Çocuk Odası Halısı</span>
+        </div>
+        <h4>Teslim Süresi</h4>
+        <p>Hava koşullarına ve yoğunluğa bağlı olarak ortalama <b>3–5 iş günü</b> içinde teslim edilir.</p>
+      </div>
+    </div>
+
+    <div class="tab-panel" id="t2">
+      <div>
+        <h3>Koltuk Yıkama</h3>
+        <p>Koltuk takımlarınızı yerinden kaldırmanıza gerek yok! Ekibimiz evinize gelerek özel koltuk yıkama makineleri ile yerinde temizlik yapar.</p>
+        <p>Önce kumaş testi yapılır, ardından koltuk cinsine uygun şampuan püskürtülerek fırçalanır. Güçlü vakum sistemi ile kirli su geri çekilir; böylece koltuklarınız kısa sürede kurur ve kullanıma hazır hale gelir.</p>
+        <div class="tip">💡 <b>İpucu:</b> Yıkamadan sonra odayı havalandırmak kuruma süresini kısaltır. Ortalama kuruma süresi 4–6 saattir.</div>
+      </div>
+      <div>
+        <h4>Temizlediğimiz Ürünler</h4>
+        <div class="types">
+          <span>Koltuk Takımı</span><span>Köşe Takımı</span><span>Berjer</span><span>Kanepe</span>
+          <span>Sandalye</span><span>Yatak / Baza</span><span>Puf</span><span>Araç Koltuğu</span>
+        </div>
+        <h4>Randevu</h4>
+        <p>Size uygun gün ve saati sipariş hattımızdan belirleyebilirsiniz. Yıkama işlemi bir takım için ortalama <b>1–2 saat</b> sürer.</p>
+      </div>
+    </div>
+
+    <div class="tab-panel" id="t3">
+      <div>
+        <h3>Yorgan & Battaniye Yıkama</h3>
+        <p>Ev tipi çamaşır makinelerine sığmayan büyük yorgan ve battaniyeleriniz, endüstriyel büyük kazanlı makinelerimizde özel programlarla yıkanır.</p>
+        <p>Yün ve kaz tüyü gibi hassas ürünlerde düşük ısı ve özel deterjan kullanılır. Kurutma sırasında yorganlar kabartılarak topaklanmanın önüne geçilir, ilk günkü hacmine kavuşur.</p>
+        <div class="tip">💡 <b>İpucu:</b> Yorganlarınızı mevsim geçişlerinde yıkatarak dolaba temiz kaldırmanız güve ve kötü kokuyu önler.</div>
+      </div>
+      <div>
+        <h4>Yıkadığımız Ürünler</h4>
+        <div class="types">
+          <span>Yün Yorgan</span><span>Elyaf Yorgan</span><span>Pamuk Yorgan</span><span>Kaz Tüyü Yorgan</span>
+          <span>Battaniye</span><span>Pike</span><span>Uyku Seti</span><span>Perde</span><span>Yastık</span>
+        </div>
+        <h4>Teslim Süresi</h4>
+        <p>Ortalama <b>2–4 iş günü</b> içinde paketli olarak teslim edilir.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Process -->
+<section id="surec">
+  <div class="container">
+    <div class="section-title">
+      <span class="tag">NASIL ÇALIŞIR?</span>
+      <h2>4 Kolay Adımda Tertemiz</h2>
+      <p>Siz sadece arayın, gerisini biz halledelim.</p>
+    </div>
+    <div class="steps">
+      <div class="step reveal"><div class="step-num">1</div><h4>Bizi Arayın</h4><p>0242 743 01 18 numaralı sipariş hattımızdan randevu oluşturun.</p></div>
+      <div class="step reveal"><div class="step-num">2</div><h4>Adresinizden Alalım</h4><p>Servis aracımız belirlenen saatte ücretsiz olarak kapınıza gelir.</p></div>
+      <div class="step reveal"><div class="step-num">3</div><h4>Özenle Yıkayalım</h4><p>Ürünleriniz cinsine uygun yöntemlerle yıkanır ve hijyenik kurutulur.</p></div>
+      <div class="step reveal"><div class="step-num">4</div><h4>Teslim Edelim</h4><p>Paketlenmiş tertemiz ürünleriniz kapınıza kadar teslim edilir.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- Why -->
+<section class="why">
+  <div class="container">
+    <div class="section-title">
+      <span class="tag">NEDEN BİZ?</span>
+      <h2>Bizi Tercih Etmeniz İçin 6 Neden</h2>
+    </div>
+    <div class="why-grid">
+      <div class="why-item reveal"><div class="why-icon">🚚</div><div><h4>Ücretsiz Servis</h4><p>Manavgat ve çevresinde adresinizden ücretsiz alım ve teslimat.</p></div></div>
+      <div class="why-item reveal"><div class="why-icon">🌿</div><div><h4>Sağlıklı Ürünler</h4><p>İnsan ve evcil hayvan sağlığına zararsız, onaylı temizlik ürünleri.</p></div></div>
+      <div class="why-item reveal"><div class="why-icon">⚙️</div><div><h4>Modern Makineler</h4><p>Son teknoloji toz alma, yıkama ve sıkma makineleri.</p></div></div>
+      <div class="why-item reveal"><div class="why-icon">🔥</div><div><h4>Kurutma Odası</h4><p>Hava şartlarından bağımsız, kokusuz ve hijyenik kurutma.</p></div></div>
+      <div class="why-item reveal"><div class="why-icon">👷</div><div><h4>Uzman Ekip</h4><p>Yılların tecrübesine sahip, güler yüzlü ve dikkatli personel.</p></div></div>
+      <div class="why-item reveal"><div class="why-icon">💰</div><div><h4>Uygun Fiyat</h4><p>Kaliteli hizmeti bütçe dostu fiyatlarla sunuyoruz.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- Order -->
+<section id="siparis">
+  <div class="container">
+    <div class="section-title">
+      <span class="tag">SİPARİŞ</span>
+      <h2>Hemen Sipariş Verin</h2>
+      <p>Sipariş hattımızı arayabilir ya da formu doldurarak talebinizi hazırlayabilirsiniz.</p>
+    </div>
+    <div class="order-wrap">
+      <div class="order-info">
+        <h3>Sipariş Hattı</h3>
+        <p>Halı, koltuk, yorgan ve battaniye yıkama siparişleriniz için hemen arayın. Ekibimiz size en uygun zamanı ayarlasın.</p>
+        <a href="tel:+902427430118" class="order-phone">
+          <div class="ic"><svg viewBox="0 0 24 24" fill="#1e2a38"><path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25 11.4 11.4 0 0 0 3.6.57 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.45.57 3.57a1 1 0 0 1-.25 1z"/></svg></div>
+          <div><small>Hemen arayın</small><b>0242 743 01 18</b></div>
+        </a>
+        <h4 style="margin-bottom:8px">🕘 Çalışma Saatleri</h4>
+        <ul class="hours">
+          <li><span>Pazartesi – Cumartesi</span><span>08:00 – 19:00</span></li>
+          <li><span>Pazar</span><span>09:00 – 17:00</span></li>
+        </ul>
+      </div>
+
+      <form class="order-form" id="orderForm">
+        <h3>Sipariş Talep Formu</h3>
+        <p>Bilgilerinizi girin, sipariş özetinizi hazırlayalım; ardından tek dokunuşla sipariş hattımızı arayın.</p>
+        <div class="form-row">
+          <div class="field"><label for="ad">Ad Soyad</label><input id="ad" required placeholder="Adınız Soyadınız"></div>
+          <div class="field"><label for="tel">Telefon</label><input id="tel" type="tel" required placeholder="05xx xxx xx xx"></div>
+        </div>
+        <div class="field">
+          <label>Hizmet Seçimi</label>
+          <div class="checks">
+            <label><input type="checkbox" name="hizmet" value="Halı Yıkama"> Halı Yıkama</label>
+            <label><input type="checkbox" name="hizmet" value="Koltuk Yıkama"> Koltuk Yıkama</label>
+            <label><input type="checkbox" name="hizmet" value="Yorgan & Battaniye Yıkama"> Yorgan & Battaniye</label>
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="field"><label for="mahalle">Mahalle / Bölge</label>
+            <select id="mahalle">
+              <option>Manavgat Merkez</option><option>Side</option><option>Kumköy</option><option>Çolaklı</option>
+              <option>Evrenseki</option><option>Kızılağaç</option><option>Sorgun</option><option>Titreyengöl</option><option>Diğer</option>
+            </select>
+          </div>
+          <div class="field"><label for="tarih">Tercih Edilen Tarih</label><input id="tarih" type="date"></div>
+        </div>
+        <div class="field"><label for="not">Not / Adres</label><textarea id="not" rows="3" placeholder="Örn: 2 adet halı (6 m² + 4 m²), açık adres..."></textarea></div>
+        <button type="submit" class="btn btn-accent">Sipariş Özetini Hazırla</button>
+        <div class="form-result" id="formResult"></div>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="details" id="sss">
+  <div class="container">
+    <div class="section-title">
+      <span class="tag">S.S.S.</span>
+      <h2>Sıkça Sorulan Sorular</h2>
+    </div>
+    <div class="faq-list">
+      <details class="faq" open><summary>Alım ve teslimat ücretli mi?</summary><p>Hayır. Manavgat ve çevresinde halı, yorgan ve battaniyelerinizi adresinizden ücretsiz alıp, yıkandıktan sonra yine ücretsiz teslim ediyoruz.</p></details>
+      <details class="faq"><summary>Halılarım ne kadar sürede teslim edilir?</summary><p>Hava koşulları ve yoğunluğa bağlı olarak halılar ortalama 3–5 iş günü, yorgan ve battaniyeler 2–4 iş günü içinde teslim edilir.</p></details>
+      <details class="faq"><summary>Halı yıkama fiyatları nasıl belirlenir?</summary><p>Halı yıkama ücreti metrekare üzerinden hesaplanır; halının cinsi (el dokuma, ipek, shaggy vb.) fiyatı etkileyebilir. Güncel fiyatlar için sipariş hattımızı arayabilirsiniz.</p></details>
+      <details class="faq"><summary>Koltuk yıkama evde mi yapılıyor?</summary><p>Evet. Koltuk yıkama hizmetimiz özel ekipmanlarla evinizde, yerinde yapılır. Kuruma süresi ortalama 4–6 saattir.</p></details>
+      <details class="faq"><summary>Kullandığınız ürünler sağlığa zararlı mı?</summary><p>Hayır. Kullandığımız tüm deterjan ve şampuanlar insan ve evcil hayvan sağlığına zararsız, onaylı ürünlerdir.</p></details>
+      <details class="faq"><summary>Kalıcı lekeler çıkar mı?</summary><p>Lekelerin büyük çoğunluğu özel leke çıkarıcılarla giderilir. Ancak boya, çamaşır suyu gibi kalıcı hasar bırakan lekelerde tam sonuç garanti edilemez; bu durumda sizi önceden bilgilendiririz.</p></details>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta">
+  <div class="container">
+    <div>
+      <h2>Temizlik İçin Bir Telefon Yeter!</h2>
+      <p>Manavgat'ın her noktasına ücretsiz servis.</p>
+    </div>
+    <a href="tel:+902427430118" class="btn">📞 0242 743 01 18</a>
+  </div>
+</section>
+
+<!-- Contact -->
+<section class="contact" id="iletisim">
+  <div class="container">
+    <div class="section-title">
+      <span class="tag">İLETİŞİM</span>
+      <h2>Bize Ulaşın</h2>
+      <p>Firmamız Manavgat / Antalya'da hizmet vermektedir. Her türlü soru ve siparişiniz için bize ulaşın.</p>
+    </div>
+    <div class="contact-grid">
+      <div class="contact-card reveal">
+        <div class="ci"><svg viewBox="0 0 24 24" fill="#fff"><path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25 11.4 11.4 0 0 0 3.6.57 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.45.57 3.57a1 1 0 0 1-.25 1z"/></svg></div>
+        <h4>Sipariş Hattı</h4>
+        <a href="tel:+902427430118" class="big">0242 743 01 18</a>
+      </div>
+      <div class="contact-card reveal">
+        <div class="ci"><svg viewBox="0 0 24 24" fill="#fff"><path d="M12 2a7 7 0 0 0-7 7c0 5.25 7 13 7 13s7-7.75 7-13a7 7 0 0 0-7-7zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5z"/></svg></div>
+        <h4>Adres</h4>
+        <p>Manavgat / Antalya</p>
+      </div>
+      <div class="contact-card reveal">
+        <div class="ci"><svg viewBox="0 0 24 24" fill="#fff"><path d="M12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2zm4.2 14.2L11 13V7h1.5v5.2l4.5 2.7z"/></svg></div>
+        <h4>Çalışma Saatleri</h4>
+        <p>Pzt – Cmt: 08:00 – 19:00<br>Pazar: 09:00 – 17:00</p>
+      </div>
+    </div>
+    <div class="map">
+      <iframe title="Manavgat Harita" loading="lazy" src="https://maps.google.com/maps?q=Manavgat,Antalya&z=13&output=embed"></iframe>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer>
+  <div class="container">
+    <div class="foot-grid">
+      <div>
+        <div class="logo">
+          <div class="logo-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2.7C9 6.5 6 10 6 14a6 6 0 0 0 12 0c0-4-3-7.5-6-11.3z"/></svg></div>
+          <div>Manavgat Halı Yıkama<small>Temizlikte güvenin adresi</small></div>
+        </div>
+        <p>Manavgat ve çevresinde halı, koltuk, yorgan ve battaniye yıkama hizmetleri. Ücretsiz alım ve teslimat ile kapınızdayız.</p>
+      </div>
+      <div>
+        <h5>Hizmetlerimiz</h5>
+        <ul>
+          <li><a href="#hizmetler">Halı Yıkama</a></li>
+          <li><a href="#hizmetler">Koltuk Yıkama</a></li>
+          <li><a href="#hizmetler">Yorgan & Battaniye Yıkama</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>İletişim</h5>
+        <ul>
+          <li>📞 <a href="tel:+902427430118">0242 743 01 18</a></li>
+          <li>📍 Manavgat / Antalya</li>
+          <li>🕘 Pzt–Cmt 08:00–19:00</li>
+        </ul>
+      </div>
+    </div>
+    <div class="copy">© <span id="yil"></span> Manavgat Halı Yıkama — Tüm hakları saklıdır.</div>
+  </div>
+</footer>
+
+<!-- Floating call button -->
+<a href="tel:+902427430118" class="float-call" aria-label="Sipariş hattını ara">
+  <svg viewBox="0 0 24 24" fill="#fff"><path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25 11.4 11.4 0 0 0 3.6.57 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.45.57 3.57a1 1 0 0 1-.25 1z"/></svg>
+  <span>0242 743 01 18</span>
+</a>
+
+<script>
+  // Year
+  document.getElementById('yil').textContent = new Date().getFullYear();
+
+  // Close mobile menu on link click
+  document.querySelectorAll('.menu a').forEach(a => a.addEventListener('click', () => document.querySelector('.menu').classList.remove('open')));
+
+  // Tabs
+  document.querySelectorAll('.tab-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+      document.querySelectorAll('.tab-panel').forEach(p => p.classList.remove('active'));
+      btn.classList.add('active');
+      document.getElementById(btn.dataset.tab).classList.add('active');
+    });
+  });
+
+  // Service buttons pre-select checkbox in form
+  document.querySelectorAll('[data-service]').forEach(b => {
+    b.addEventListener('click', () => {
+      document.querySelectorAll('input[name="hizmet"]').forEach(c => { c.checked = c.value === b.dataset.service; });
+    });
+  });
+
+  // Counter animation
+  const counters = document.querySelectorAll('[data-count]');
+  const countObs = new IntersectionObserver(entries => {
+    entries.forEach(e => {
+      if (!e.isIntersecting) return;
+      const el = e.target, target = +el.dataset.count;
+      let cur = 0; const step = Math.max(1, Math.ceil(target / 60));
+      const t = setInterval(() => {
+        cur += step;
+        if (cur >= target) { cur = target; clearInterval(t); }
+        el.textContent = cur.toLocaleString('tr-TR') + '+';
+      }, 25);
+      countObs.unobserve(el);
+    });
+  }, { threshold: .5 });
+  counters.forEach(c => countObs.observe(c));
+
+  // Reveal on scroll
+  const revObs = new IntersectionObserver(entries => {
+    entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); revObs.unobserve(e.target); } });
+  }, { threshold: .15 });
+  document.querySelectorAll('.reveal').forEach(el => revObs.observe(el));
+
+  // Order form -> summary
+  document.getElementById('orderForm').addEventListener('submit', e => {
+    e.preventDefault();
+    const esc = s => s.replace(/[&<>"']/g, ch => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[ch]));
+    const ad = esc(document.getElementById('ad').value.trim());
+    const tel = esc(document.getElementById('tel').value.trim());
+    const hizmetler = [...document.querySelectorAll('input[name="hizmet"]:checked')].map(c => c.value);
+    const mahalle = esc(document.getElementById('mahalle').value);
+    const tarih = document.getElementById('tarih').value;
+    const not = esc(document.getElementById('not').value.trim());
+    const res = document.getElementById('formResult');
+    if (!hizmetler.length) {
+      res.style.cssText = 'background:#fff1f0;border-color:#f5c2bf;color:#9b1c1c';
+      res.innerHTML = '⚠️ Lütfen en az bir hizmet seçiniz.';
+      res.classList.add('show');
+      return;
+    }
+    res.style.cssText = '';
+    const tarihStr = tarih ? new Date(tarih).toLocaleDateString('tr-TR') : 'Belirtilmedi';
+    res.innerHTML = `✅ <b>Sipariş özetiniz hazır, ${ad}!</b><br>
+      Hizmet: ${hizmetler.join(', ')}<br>
+      Bölge: ${mahalle} &nbsp;•&nbsp; Tarih: ${tarihStr}<br>
+      Telefon: ${tel}${not ? '<br>Not: ' + not : ''}<br><br>
+      Siparişinizi tamamlamak için şimdi arayın: <a href="tel:+902427430118">0242 743 01 18</a>`;
+    res.classList.add('show');
+  });
+</script>
+</body>
+</html>
